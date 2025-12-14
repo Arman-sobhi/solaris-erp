@@ -1,4 +1,4 @@
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { CheckCircle, XCircle, AlertCircle, ClipboardCheck, TrendingUp } from 'lucide-react';

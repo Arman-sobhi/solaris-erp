@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ShoppingBag, Plus, CheckCircle, Clock, FileText, DollarSign, MoreVertical, Edit, Trash2 } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useData } from '../contexts/DataContext';
+import { useLanguage } from './LanguageContext';
+import { useData } from './DataContext';
 import { PurchaseOrderDialog } from './PurchaseOrderDialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu';
 

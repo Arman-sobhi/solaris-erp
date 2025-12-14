@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Plus, Search, Filter, Download, Send, Eye, Edit, MoreVertical } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Card } from '../components/ui/card';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Card } from './components/ui/card';
 import {
   Table,
   TableBody,
@@ -10,17 +10,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
+} from './components/ui/table';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
-import { Badge } from '../components/ui/badge';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { mockInvoices, invoiceStats } from '../data/mockInvoices';
-import { KPICard } from '../widgets/KPICard';
+} from './components/ui/dropdown-menu';
+import { Badge } from './components/ui/badge';
+import { StatusBadge } from './widgets/StatusBadge';
+import { mockInvoices, invoiceStats } from './mockInvoices';
+import { KPICard } from './KPICard';
 import { DollarSign, FileText, AlertCircle, CheckCircle } from 'lucide-react';
 
 interface InvoiceListPageProps {
@@ -155,7 +155,7 @@ export function InvoiceListPage({ onViewInvoice }: InvoiceListPageProps) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredInvoices.length === 0 ? (
+              {filteredInvoices.length === 0 ? (
               <TableRow>
                 <TableCell colSpan={9} className="text-center py-8 text-gray-500">
                   No invoices found
@@ -163,7 +163,7 @@ export function InvoiceListPage({ onViewInvoice }: InvoiceListPageProps) {
               </TableRow>
             ) : (
               filteredInvoices.map((invoice) => (
-                <TableRow key={invoice.id} className="cursor-pointer hover:bg-gray-50">
+                <TableRow key={invoice.id} className="cursor-pointer hover:bg-gray-50" onClick={() => onViewInvoice?.(invoice.id)}>
                   <TableCell className="font-mono text-sm">{invoice.invoiceNumber}</TableCell>
                   <TableCell>
                     <div>

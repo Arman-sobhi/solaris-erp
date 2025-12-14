@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
 import { Search, Plus, Phone, Mail, MapPin, MoreVertical, Edit, Trash2, Eye, Users } from 'lucide-react';
 import { AddPartnerDialog } from './AddPartnerDialog';
 import { EditPartnerDialog } from './EditPartnerDialog';
-import { useData, Partner } from '../contexts/DataContext';
+import { useData, Partner } from './DataContext';
 import {
   DropdownMenu,
   DropdownMenuContent,

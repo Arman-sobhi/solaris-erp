@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Header } from './Header';
-import { Sidebar } from '../components/Sidebar';
+import { Sidebar } from './Sidebar';
 
 interface AppLayoutProps {
   children: ReactNode;

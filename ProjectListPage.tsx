@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { Plus, Search, Calendar, DollarSign, Users, TrendingUp, Eye, MoreVertical } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Card } from '../components/ui/card';
-import { Progress } from '../components/ui/progress';
-import { Badge } from '../components/ui/badge';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Card } from './components/ui/card';
+import { Progress } from './components/ui/progress';
+import { Badge } from './components/ui/badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { mockProjects } from '../data/mockProjects';
-import { cn } from '../components/ui/utils';
+} from './components/ui/dropdown-menu';
+import { StatusBadge } from './widgets/StatusBadge';
+import { mockProjects } from './mockProjects';
+import { cn } from './components/ui/utils';
 
 interface ProjectListPageProps {
   onViewProject?: (projectId: string) => void;

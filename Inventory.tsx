@@ -6,7 +6,7 @@ import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Search, Plus, AlertTriangle, TrendingDown, Package, Warehouse, Edit, Trash2 } from 'lucide-react';
 import { InventoryDialog } from './InventoryDialog';
-import { useData, InventoryItem } from '../contexts/DataContext';
+import { useData, InventoryItem } from './DataContext';
 import {
   AlertDialog,
   AlertDialogAction,

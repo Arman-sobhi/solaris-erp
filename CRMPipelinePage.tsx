@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Plus, Phone, Mail, Calendar, DollarSign, User, MoreVertical, Eye } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { Button } from './components/ui/button';
+import { Card } from './components/ui/card';
+import { Badge } from './components/ui/badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
-import { mockLeads, pipelineStages } from '../data/mockCRM';
-import { cn } from '../components/ui/utils';
+} from './components/ui/dropdown-menu';
+import { mockLeads, pipelineStages } from './mockCRM';
+import { cn } from './components/ui/utils';
 
 interface CRMPipelinePageProps {
   onViewLead?: (leadId: string) => void;

@@ -1,8 +1,8 @@
 import { ArrowLeft, Edit, AlertCircle, CheckCircle, Clock, TrendingUp } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card } from '../components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Progress } from '../components/ui/progress';
+import { Button } from './components/ui/button';
+import { Card } from './components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+import { Progress } from './components/ui/progress';
 import {
   Table,
   TableBody,
@@ -10,10 +10,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { mockMachines, MachineDetail } from '../data/mockMachines';
-import { Badge } from '../components/ui/badge';
+} from './components/ui/table';
+import { StatusBadge } from './widgets/StatusBadge';
+import { mockMachines, MachineDetail } from './mockMachines';
+import { Badge } from './components/ui/badge';
 
 interface MachineDetailPageProps {
   machineId: string;

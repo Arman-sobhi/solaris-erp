@@ -1,7 +1,7 @@
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Card } from './components/ui/card';
+import { Button } from './components/ui/button';
+import { Badge } from './components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { DollarSign, TrendingUp, TrendingDown, CreditCard, FileText, AlertCircle } from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
@@ -63,7 +63,11 @@ const expenseCategories = [
   { category: 'Other', amount: 12000 },
 ];
 
-export function Finance() {
+interface FinanceProps {
+  onViewInvoice?: (invoiceId: string) => void;
+}
+
+export function Finance({ onViewInvoice }: FinanceProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'paid': return 'bg-green-100 text-green-700 hover:bg-green-100';
@@ -258,7 +262,7 @@ export function Finance() {
                         </Badge>
                       </td>
                       <td className="py-4 px-4">
-                        <Button variant="ghost" size="sm">View</Button>
+                        <Button variant="ghost" size="sm" onClick={() => onViewInvoice?.(invoice.id)}>View</Button>
                       </td>
                     </tr>
                   ))}

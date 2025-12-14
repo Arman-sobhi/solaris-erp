@@ -1,4 +1,4 @@
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Users, ShoppingCart, TrendingUp, DollarSign, ArrowUp, ArrowDown } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 

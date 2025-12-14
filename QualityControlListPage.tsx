@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Plus, Search, Filter, Download, MoreVertical, Eye, Edit, CheckCircle, XCircle } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Card } from '../components/ui/card';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Card } from './components/ui/card';
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
+} from './components/ui/table';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,18 +18,18 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
+} from './components/ui/dropdown-menu';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../components/ui/select';
-import { Progress } from '../components/ui/progress';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { EmptyState } from '../widgets/EmptyState';
-import { mockQualityControlRecords, qcStats } from '../data/mockQualityControl';
+} from './components/ui/select';
+import { Progress } from './components/ui/progress';
+import { StatusBadge } from './widgets/StatusBadge';
+import { EmptyState } from './widgets/EmptyState';
+import { mockQualityControlRecords, qcStats } from './mockQualityControl';
 
 interface QualityControlListPageProps {
   onViewRecord: (recordId: string) => void;

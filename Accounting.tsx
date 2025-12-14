@@ -1,9 +1,9 @@
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { FileText, TrendingUp, DollarSign, BookOpen } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from './LanguageContext';
 
 interface JournalEntry {
   id: string;

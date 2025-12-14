@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
 import { Search, Plus, Edit, Trash2, Package } from 'lucide-react';
 import { ProductDialog } from './ProductDialog';
-import { useData, Product } from '../contexts/DataContext';
+import { useData, Product } from './DataContext';
 import {
   AlertDialog,
   AlertDialogAction,

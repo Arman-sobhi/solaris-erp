@@ -1,39 +1,45 @@
 import { useState } from 'react';
-import { LanguageProvider } from './contexts/LanguageContext';
-import { DataProvider } from './contexts/DataContext';
-import { AppLayout } from './layouts/AppLayout';
-import { Dashboard } from './components/Dashboard';
-import { PartnerList } from './components/PartnerList';
-import { OrderManagement } from './components/OrderManagement';
-import { Products } from './components/Products';
-import { Analytics } from './components/Analytics';
-import { CRM } from './components/CRM';
-import { Inventory } from './components/Inventory';
-import { Production } from './components/Production';
-import { QualityControl } from './components/QualityControl';
-import { SupplyChain } from './components/SupplyChain';
-import { FSM } from './components/FSM';
-import { HumanResources } from './components/HumanResources';
-import { Finance } from './components/Finance';
-import { Procurement } from './components/Procurement';
-import { Shipping } from './components/Shipping';
-import { Maintenance } from './components/Maintenance';
-import { Purchasing } from './components/Purchasing';
-import { Sales } from './components/Sales';
-import { Accounting } from './components/Accounting';
-import { Machines } from './components/Machines';
-import { BOM } from './components/BOM';
-import { Formulation } from './components/Formulation';
-import { Projects } from './components/Projects';
+import { LanguageProvider } from './LanguageContext';
+import { DataProvider } from './DataContext';
+import { AppLayout } from './AppLayout';
+import { Dashboard } from './Dashboard';
+import { PartnerList } from './PartnerList';
+import { OrderManagement } from './OrderManagement';
+import { Products } from './Products';
+import { Analytics } from './Analytics';
+import { CRM } from './CRM';
+import { Inventory } from './Inventory';
+import { Production } from './Production';
+import { QualityControl } from './QualityControl';
+import { SupplyChain } from './SupplyChain';
+import { FSM } from './FSM';
+import { HumanResources } from './HumanResources';
+import { Finance } from './Finance';
+import { Procurement } from './Procurement';
+import { Shipping } from './Shipping';
+import { Maintenance } from './Maintenance';
+import { Purchasing } from './Purchasing';
+import { Sales } from './Sales';
+import { Accounting } from './Accounting';
+import { Machines } from './Machines';
+import { BOM } from './BOM';
+import { Formulation } from './Formulation';
+import { Projects } from './Projects';
 // New page imports
-import { ProductListPage } from './pages/ProductListPage';
-import { ProductDetailPage } from './pages/ProductDetailPage';
-import { MachineListPage } from './pages/MachineListPage';
-import { MachineDetailPage } from './pages/MachineDetailPage';
-import { EmployeeListPage } from './pages/EmployeeListPage';
-import { MaintenanceListPage } from './pages/MaintenanceListPage';
-import { QualityControlListPage } from './pages/QualityControlListPage';
-import { BOMEditorPage } from './pages/BOMEditorPage';
+import { ProductListPage } from './ProductListPage';
+import { ProductDetailPage } from './ProductDetailPage';
+import { MachineListPage } from './MachineListPage';
+import { MachineDetailPage } from './MachineDetailPage';
+import { EmployeeListPage } from './EmployeeListPage';
+import { EmployeeDetailPage } from './EmployeeDetailPage';
+import { MaintenanceListPage } from './MaintenanceListPage';
+import { MaintenanceDetailPage } from './MaintenanceDetailPage';
+import { QualityControlListPage } from './QualityControlListPage';
+import { QualityControlDetailPage } from './QualityControlDetailPage';
+import { BOMEditorPage } from './BOMEditorPage';
+import { ProjectDetailPage } from './ProjectDetailPage';
+import { InvoiceListPage } from './InvoiceListPage';
+import { InvoiceDetailPage } from './InvoiceDetailPage';
 
 export default function App() {
   const [activeView, setActiveView] = useState('dashboard');
@@ -51,6 +57,22 @@ export default function App() {
     setSubView({ type: 'employee-detail', id: employeeId });
   };
 
+  const handleViewMaintenance = (recordId: string) => {
+    setSubView({ type: 'maintenance-detail', id: recordId });
+  };
+
+  const handleViewQC = (recordId: string) => {
+    setSubView({ type: 'quality-detail', id: recordId });
+  };
+
+  const handleViewProject = (projectId: string) => {
+    setSubView({ type: 'project-detail', id: projectId });
+  };
+
+  const handleViewInvoice = (invoiceId: string) => {
+    setSubView({ type: 'invoice-detail', id: invoiceId });
+  };
+
   const handleBack = () => {
     setSubView(null);
   };
@@ -63,6 +85,16 @@ export default function App() {
           return <ProductDetailPage productId={subView.id!} onBack={handleBack} />;
         case 'machine-detail':
           return <MachineDetailPage machineId={subView.id!} onBack={handleBack} />;
+        case 'employee-detail':
+          return <EmployeeDetailPage employeeId={subView.id!} onBack={handleBack} />;
+        case 'maintenance-detail':
+          return <MaintenanceDetailPage recordId={subView.id!} onBack={handleBack} />;
+        case 'quality-detail':
+          return <QualityControlDetailPage recordId={subView.id!} onBack={handleBack} />;
+        case 'project-detail':
+          return <ProjectDetailPage projectId={subView.id!} onBack={handleBack} />;
+        case 'invoice-detail':
+          return <InvoiceDetailPage invoiceId={subView.id!} onBack={handleBack} />;
         case 'bom-editor':
           return <BOMEditorPage />;
         default:
@@ -87,7 +119,7 @@ export default function App() {
       case 'production':
         return <Production />;
       case 'quality':
-        return <QualityControlListPage onViewRecord={(id) => console.log('View QC:', id)} />;
+        return <QualityControlListPage onViewRecord={handleViewQC} />;
       case 'supply-chain':
         return <SupplyChain />;
       case 'fsm':
@@ -95,13 +127,13 @@ export default function App() {
       case 'hr':
         return <EmployeeListPage onViewEmployee={handleViewEmployee} />;
       case 'finance':
-        return <Finance />;
+        return <Finance onViewInvoice={handleViewInvoice} />;
       case 'procurement':
         return <Procurement />;
       case 'shipping':
         return <Shipping />;
       case 'maintenance':
-        return <MaintenanceListPage onViewRecord={(id) => console.log('View maintenance:', id)} />;
+        return <MaintenanceListPage onViewRecord={handleViewMaintenance} />;
       case 'purchasing':
         return <Purchasing />;
       case 'sales':
@@ -115,7 +147,9 @@ export default function App() {
       case 'formulation':
         return <Formulation />;
       case 'projects':
-        return <Projects />;
+        return <Projects onViewProject={handleViewProject} />;
+      case 'invoices':
+        return <InvoiceListPage onViewInvoice={handleViewInvoice} />;
       case 'analytics':
         return <Analytics />;
       default:

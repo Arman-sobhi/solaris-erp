@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Customer } from '../contexts/DataContext';
+import { Customer } from './DataContext';
 
 interface CustomerDialogProps {
   open: boolean;

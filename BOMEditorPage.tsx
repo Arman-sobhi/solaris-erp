@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ArrowLeft, Plus, Save, Trash2, Search, Package } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Card } from '../components/ui/card';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Card } from './components/ui/card';
 import {
   Table,
   TableBody,
@@ -10,16 +10,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
+} from './components/ui/table';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../components/ui/select';
-import { Label } from '../components/ui/label';
-import { Badge } from '../components/ui/badge';
+} from './components/ui/select';
+import { Label } from './components/ui/label';
+import { Badge } from './components/ui/badge';
 
 export function BOMEditorPage() {
   const [bomName, setBomName] = useState('Premium Wheat Bread BOM');

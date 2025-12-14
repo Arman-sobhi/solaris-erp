@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { ArrowLeft, Edit, Trash2, Package, Wrench, Users, Warehouse, FileText } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card } from '../components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Badge } from '../components/ui/badge';
+import { Button } from './components/ui/button';
+import { Card } from './components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+import { Badge } from './components/ui/badge';
 import {
   Table,
   TableBody,
@@ -11,9 +11,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { mockProducts, ProductDetail } from '../data/mockProducts';
+} from './components/ui/table';
+import { StatusBadge } from './widgets/StatusBadge';
+import { mockProducts, ProductDetail } from './mockProducts';
 
 interface ProductDetailPageProps {
   productId: string;

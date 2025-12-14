@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from './LanguageContext';
 
 interface SidebarProps {
   activeView: string;

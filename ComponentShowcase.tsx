@@ -1,15 +1,15 @@
 import { Package, TrendingUp, AlertCircle, Users, CheckCircle, XCircle, Clock, Search } from 'lucide-react';
-import { Card } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Progress } from '../components/ui/progress';
-import { Badge } from '../components/ui/badge';
-import { KPICard } from '../widgets/KPICard';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { EmptyState } from '../widgets/EmptyState';
-import { LoadingSpinner } from '../widgets/LoadingSpinner';
-import { PageHeader } from '../sections/PageHeader';
-import { StatsGrid } from '../sections/StatsGrid';
+import { Card } from './components/ui/card';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Progress } from './components/ui/progress';
+import { Badge } from './components/ui/badge';
+import { KPICard } from './widgets/KPICard';
+import { StatusBadge } from './widgets/StatusBadge';
+import { EmptyState } from './widgets/EmptyState';
+import { LoadingSpinner } from './widgets/LoadingSpinner';
+import { PageHeader } from './PageHeader';
+import { StatsGrid } from './StatsGrid';
 
 /**
  * Component Showcase Page

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Plus, Search, Filter, Download, Upload, MoreVertical, Eye, Edit, UserX } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Card } from '../components/ui/card';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Card } from './components/ui/card';
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
+} from './components/ui/table';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,18 +18,18 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
+} from './components/ui/dropdown-menu';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../components/ui/select';
-import { Badge } from '../components/ui/badge';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { EmptyState } from '../widgets/EmptyState';
-import { mockEmployees } from '../data/mockEmployees';
+} from './components/ui/select';
+import { Badge } from './components/ui/badge';
+import { StatusBadge } from './widgets/StatusBadge';
+import { EmptyState } from './widgets/EmptyState';
+import { mockEmployees } from './mockEmployees';
 
 interface EmployeeListPageProps {
   onViewEmployee: (employeeId: string) => void;

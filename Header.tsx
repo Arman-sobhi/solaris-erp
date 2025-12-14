@@ -1,6 +1,6 @@
 import { Bell, Search, Settings, User, Moon, Sun, LogOut, HelpCircle } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,10 +8,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '../components/ui/dropdown-menu';
-import { Badge } from '../components/ui/badge';
+} from './components/ui/dropdown-menu';
+import { Badge } from './components/ui/badge';
 import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from './LanguageContext';
 
 export function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);

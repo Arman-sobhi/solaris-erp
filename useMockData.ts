@@ -1,12 +1,12 @@
 // Mock data hooks for ERP system
-import { mockProducts } from '../data/mockProducts';
-import { mockMachines } from '../data/mockMachines';
-import { mockEmployees } from '../data/mockEmployees';
-import { mockLeads, pipelineStages } from '../data/mockCRM';
-import { mockInvoices, invoiceStats } from '../data/mockInvoices';
-import { mockProjects } from '../data/mockProjects';
-import { mockMaintenanceRecords, maintenanceStats } from '../data/mockMaintenance';
-import { mockQualityControlRecords, qcStats } from '../data/mockQualityControl';
+import { mockProducts } from './mockProducts';
+import { mockMachines } from './mockMachines';
+import { mockEmployees } from './mockEmployees';
+import { mockLeads, pipelineStages } from './mockCRM';
+import { mockInvoices, invoiceStats } from './mockInvoices';
+import { mockProjects } from './mockProjects';
+import { mockMaintenanceRecords, maintenanceStats } from './mockMaintenance';
+import { mockQualityControlRecords, qcStats } from './mockQualityControl';
 
 export function useProducts() {
   return {

@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Warehouse } from '../contexts/DataContext';
+import { Warehouse } from './DataContext';
 
 interface WarehouseDialogProps {
   open: boolean;

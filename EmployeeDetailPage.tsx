@@ -1,9 +1,9 @@
 import { ArrowLeft, Edit, Mail, Phone, MapPin, Calendar, Award, Wrench, TrendingUp, Clock } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card } from '../components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Badge } from '../components/ui/badge';
-import { Progress } from '../components/ui/progress';
+import { Button } from './components/ui/button';
+import { Card } from './components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+import { Badge } from './components/ui/badge';
+import { Progress } from './components/ui/progress';
 import {
   Table,
   TableBody,
@@ -11,9 +11,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { mockEmployees } from '../data/mockEmployees';
+} from './components/ui/table';
+import { StatusBadge } from './widgets/StatusBadge';
+import { mockEmployees } from './mockEmployees';
 
 interface EmployeeDetailPageProps {
   employeeId: string;

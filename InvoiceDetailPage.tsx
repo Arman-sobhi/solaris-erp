@@ -1,6 +1,6 @@
 import { ArrowLeft, Download, Send, Edit, Printer, Check } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card } from '../components/ui/card';
+import { Button } from './components/ui/button';
+import { Card } from './components/ui/card';
 import {
   Table,
   TableBody,
@@ -8,11 +8,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../components/ui/table';
-import { Badge } from '../components/ui/badge';
-import { StatusBadge } from '../widgets/StatusBadge';
-import { mockInvoices } from '../data/mockInvoices';
-import { Separator } from '../components/ui/separator';
+} from './components/ui/table';
+import { Badge } from './components/ui/badge';
+import { StatusBadge } from './widgets/StatusBadge';
+import { mockInvoices } from './mockInvoices';
+import { Separator } from './components/ui/separator';
 
 interface InvoiceDetailPageProps {
   invoiceId: string;

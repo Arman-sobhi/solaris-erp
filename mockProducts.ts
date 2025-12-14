@@ -291,7 +291,6 @@ export const mockProducts: ProductDetail[] = [
     images: ['/products/bagels-1.jpg'],
     createdAt: '2024-05-20',
     updatedAt: '2024-12-09',
-    status: 'active',
     machines: [
       { id: 'mach-001', name: 'Industrial Mixer M-500', role: 'Mixing', runtime: 10 },
       { id: 'mach-008', name: 'Bagel Former BF-50', role: 'Shaping', runtime: 8 },

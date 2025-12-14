@@ -1,9 +1,9 @@
-import { Card } from './ui/card';
+import { Card } from './components/ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { FolderKanban, Plus, Users, Calendar, TrendingUp } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from './LanguageContext';
 
 interface Project {
   id: string;
@@ -111,7 +111,7 @@ const mockProjects: Project[] = [
   },
 ];
 
-export function Projects() {
+export function Projects({ onViewProject }: { onViewProject?: (projectId: string) => void }) {
   const { language } = useLanguage();
 
   const getStatusColor = (status: string) => {
@@ -321,7 +321,7 @@ export function Projects() {
               </div>
 
               <div className="flex gap-2 pt-4 border-t border-gray-100">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={() => onViewProject?.(project.id)}>
                   {language === 'en' ? 'View Details' : 'جزئیات'}
                 </Button>
                 <Button variant="outline" size="sm">
