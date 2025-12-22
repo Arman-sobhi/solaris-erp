@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   RTL Base Layer
+   ============================================ */
+@layer base {
+  html {
+    direction: rtl;
+    font-family: 'Vazirmatn', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-damask text-rosary antialiased;
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* Persian numeral support */
+  input[type="number"] {
+    font-feature-settings: "ss02" on;
+  }
+
+  /* Fix icon flip for RTL */
+  [dir="rtl"] .icon-flip {
+    transform: scaleX(-1);
+  }
+}
+
+/* ============================================
+   RTL Utilities
+   ============================================ */
+@layer utilities {
+  /* Start/End margin/padding utilities for RTL */
+  .ms-auto {
+    margin-inline-start: auto;
+  }
+  .me-auto {
+    margin-inline-end: auto;
+  }
+  
+  /* Flex gap with RTL awareness */
+  .gap-rtl-2 {
+    gap: 0.5rem;
+  }
+  
+  /* Text alignment RTL */
+  .text-start {
+    text-align: start;
+  }
+  .text-end {
+    text-align: end;
+  }
+
+  /* Direction override */
+  .dir-ltr {
+    direction: ltr;
+  }
+  .dir-rtl {
+    direction: rtl;
+  }
+}
+
+/* ============================================
+   Chart Theming for Dark Mode
+   ============================================ */
+.recharts-cartesian-axis-tick-value {
+  fill: #EBE0C2 !important;
+  font-family: 'Vazirmatn', sans-serif !important;
+  font-size: 12px !important;
+}
+
+.recharts-cartesian-grid line {
+  stroke: rgba(255, 255, 255, 0.1) !important;
+}
+
+.recharts-tooltip-wrapper {
+  direction: rtl !important;
+}
+
